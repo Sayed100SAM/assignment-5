@@ -16,7 +16,7 @@ for (const btn of callBtn) {
     const currentCoin = totalCoin - 20;
 
     if (totalCoin >= 20) {
-      alert(${serviceName} - ${serviceNumber} এ কল করা হচ্ছে...);
+      alert(`${serviceName} - ${serviceNumber} এ কল করা হচ্ছে...`);
       getIdFunc("total-coin").innerText = currentCoin;
 
       // call history
@@ -40,7 +40,7 @@ for (const btn of callBtn) {
 
       historyContainer.appendChild(createDiv);
     } else {
-      alert(আপনার পর্যাপ্ত কয়েন নাই।কল করতে কমপক্ষে ২০ কয়েন লাগবে।);
+      alert(`আপনার পর্যাপ্ত কয়েন নাই।কল করতে কমপক্ষে ২০ কয়েন লাগবে।`);
       return;
     }
   });
@@ -66,7 +66,7 @@ for (const btn of copyBtn) {
     const totalCopy = parseInt(getIdFunc("total-copy").innerText);
     const serviceNumberText =
       btn.parentElement.parentElement.children[2].children[0].innerText;
-    alert(নম্বর কপি হয়েছে : ${serviceNumberText});
+    alert(`নম্বর কপি হয়েছে : ${serviceNumberText}`);
 
     navigator.clipboard.writeText(serviceNumberText);
 
@@ -78,6 +78,5 @@ for (const btn of copyBtn) {
 // clear all button functionality
 getIdFunc("clear-history-btn").addEventListener("click", function () {
   getIdFunc("history-container").innerHTML = "";
-  getIdFunc("history-container").classList.remove("pt-6");
 });
 
