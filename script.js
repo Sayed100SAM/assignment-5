@@ -19,7 +19,7 @@ for (const btn of callBtn) {
       alert(`${serviceName} - ${serviceNumber} এ কল করা হচ্ছে...`);
       getIdFunc("total-coin").innerText = currentCoin;
 
-      // call history
+
 
       const historyContainer = getIdFunc("history-container");
       const createDiv = document.createElement("div");
@@ -46,7 +46,7 @@ for (const btn of callBtn) {
   });
 }
 
-// heart icon
+
 
 const heartIcon = document.getElementsByClassName("heart-icon");
 for (const icon of heartIcon) {
@@ -58,7 +58,7 @@ for (const icon of heartIcon) {
   });
 }
 
-// copy paste functionality
+
 const copyBtn = document.getElementsByClassName("copy-btn");
 
 for (const btn of copyBtn) {
@@ -75,7 +75,7 @@ for (const btn of copyBtn) {
   });
 }
 
-// clear all button functionality
+
 getIdFunc("clear-history-btn").addEventListener("click", function () {
   getIdFunc("history-container").innerHTML = "";
 });
